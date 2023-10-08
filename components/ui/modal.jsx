@@ -30,17 +30,17 @@ function Modal() {
         <div className="space-y-16 text-center w-full">
           <h2 className="text-4xl font-light tracking-wider">Choose your destination</h2>
           <div className="flex space-x-4 justify-center w-full">
-            <div className="flex flex-col justify-center items-center w-full space-y-8">
+            <div className="cardContainer">
               <Image src={Moon} className="destinationCard" />
               <h2 className="text-lg font-light">The Moon</h2>
             </div>
-            <div className="flex flex-col justify-center items-center w-full space-y-8">
+            <div className="cardContainer">
               <Image src={Mars} className="destinationCard" />
               <h2 className="text-lg font-light">Mars</h2>
             </div>
           </div>
-          <Link href="/destinations" className="block">
-            <button className="rounded-md hover:brightness-110 active:scale-90 transition-all bg-yellow-800 text-white px-8 py-2">
+          <Link href="/destinations" className="block max-w-sm m-auto">
+            <button className="rounded-md hover:brightness-110 active:scale-90 w-full transition-all bg-yellow-800 text-white px-8 py-2">
               See more destinations!
             </button>
           </Link>

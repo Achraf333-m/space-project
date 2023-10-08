@@ -31,7 +31,10 @@ body {
     @apply opacity-70 hover:opacity-100 cursor-pointer text-2xl hover:scale-110 transition-all duration-500 active:scale-90;
   }
   .destinationCard {
-    @apply h-60 w-[50%] bg-transparent animate-spin-slow rounded-md object-contain
+    @apply h-60 w-[50%] bg-transparent animate-spin-slow rounded-md object-contain cursor-pointer
+  }
+  .cardContainer {
+    @apply flex flex-col justify-center items-center w-full space-y-8
   }
 }
 @layer base {
