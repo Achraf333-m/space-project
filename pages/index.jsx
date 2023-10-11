@@ -4,6 +4,7 @@ import BasicModal from "@/components/ui/modal";
 import { useRecoilState } from "recoil";
 import { modalState } from "@/states/atom";
 import Nav from "@/components/Nav";
+import Background from "@/components/Background";
 
 export default function Home() {
   const [showModal, setShowModal] = useRecoilState(modalState);
@@ -14,11 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <Image
-        src={background}
-        alt=""
-        className="-z-40 w-screen h-screen absolute"
-      />
+      <Background background={background} />
       <div className="px-10 h-screen z-40 overflow-hidden">
         <Nav />
         <main className=" m-auto max-w-5xl h-full flex items-center justify-between">

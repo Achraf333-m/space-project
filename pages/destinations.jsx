@@ -1,8 +1,15 @@
+import Image from "next/image";
+import background from '@/public/destination/background-destination-desktop.jpg'
+import Background from "@/components/Background";
+import Carousel from "@/components/Carousel";
+import Nav from "@/components/Nav";
+
 function destinations() {
     return (
-        <div>
-            destinations
-        </div>
+        <>
+            <Background background={background} />
+            <Nav />
+        </>
     );
 }
 
