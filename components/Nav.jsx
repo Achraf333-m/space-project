@@ -6,7 +6,6 @@ import Link from "next/link";
 function Nav() {
   const router = useRouter();
   const path = router.pathname;
-  console.log(path);
   return (
     <nav className=" m-auto max-w-6xl h-40 flex items-center justify-between">
       <Link href="/">

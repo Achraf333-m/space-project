@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Background background={background} />
-      <div className="px-10 h-screen z-40 overflow-hidden">
+      <div className="pageFormat">
         <Nav />
         <main className=" m-auto max-w-5xl h-full flex items-center justify-between">
           <div className="w-[50%] h-full flex flex-col cursor-default">

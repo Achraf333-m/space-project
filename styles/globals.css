@@ -36,14 +36,8 @@ body {
   .cardContainer {
     @apply flex flex-col justify-center items-center w-full space-y-8
   }
-}
-@layer base {
-  body {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+  .pageFormat {
+    @apply px-10 h-screen z-40 overflow-hidden
   }
 }
+
