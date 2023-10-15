@@ -16,7 +16,7 @@ function Nav() {
         />
       </Link>
 
-      <ul className="flex space-x-6 text-xl">
+      <ul className="flex space-x-4 text-xl font-extralight">
         <li className="listStyle">
           {path === "/" || (
             <Link href="/"> Home</Link>
@@ -28,7 +28,7 @@ function Nav() {
           )}
         </li>
         <li className="listStyle">
-          {path === "crew" || <Link href="/crew"> Crew</Link>}
+          {path === "/crew" || <Link href="/crew"> Crew</Link>}
         </li>
         <li className="listStyle">
           {path === "/technologies" || (
