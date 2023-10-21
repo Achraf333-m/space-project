@@ -39,5 +39,8 @@ body {
   .pageFormat {
     @apply px-10 h-screen z-40 overflow-hidden
   }
+  .btn {
+    @apply rounded-md font-extralight hover:brightness-110 active:scale-90 w-full transition-all bg-yellow-800 text-white px-8 py-2
+  }
 }
 

@@ -36,7 +36,7 @@ function Modal() {
               <CardContainer image={Titan} name={"Titan"} />
             </div>
             <Link href="/destinations" className="block max-w-sm m-auto">
-              <button className="rounded-md font-extralight hover:brightness-110 active:scale-90 w-full transition-all bg-yellow-800 text-white px-8 py-2">
+              <button className="btn">
                 See destinations!
               </button>
             </Link>
