@@ -1,6 +1,7 @@
 import Background from "@/components/Background";
 import Nav from "@/components/Nav";
 import Tab from "@/components/ui/Tab";
+import { sendForm } from "@/lib/api";
 import backgroundImage from "@/public/destination/background-destination-desktop.jpg";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -12,8 +13,8 @@ function ticket() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async(data) => {
+    await sendForm(data)
     useSubmitted(true);
   };
 

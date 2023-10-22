@@ -13,6 +13,8 @@ export default function Home() {
     setShowModal(!showModal);
   };
 
+  
+
   return (
     <>
       <Tab name={"Home"} />
