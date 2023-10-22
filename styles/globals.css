@@ -37,10 +37,16 @@ body {
     @apply flex flex-col justify-center items-center w-full space-y-8
   }
   .pageFormat {
-    @apply px-10 h-screen z-40 overflow-hidden
+    @apply px-8 md:px-10 h-screen z-40 overflow-hidden
   }
   .btn {
     @apply rounded-md font-extralight hover:brightness-110 active:scale-90 w-full transition-all bg-yellow-800 text-white px-8 py-2
+  }
+  .disBtn {
+    @apply rounded-md font-extralight w-full transition-all bg-yellow-800 text-white px-8 py-2 opacity-40
+  }
+  .btnSub {
+    @apply rounded-full w-40 h-40 transition-all bg-green-400 text-white p-10 flex items-center justify-center text-7xl
   }
 }
 
@@ -52,6 +58,9 @@ body {
     @apply bg-white cursor-pointer rounded-full
   }
   select {
-    @apply bg-black py-2 px-4 outline-none cursor-pointer
+    @apply bg-black py-2 px-4 outline-none cursor-pointer md:w-full w-40
+
   }
+  
+  
 }

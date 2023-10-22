@@ -21,7 +21,7 @@ function Modal() {
     <MuiModal
       open={showModal}
       onClose={handleModal}
-      className="max-w-5xl m-auto !top-40 !flex !flex-col !items-center transition-all !duration-500"
+      className="max-w-5xl !p-10 m-auto !top-40 !flex !flex-col !items-center transition-all !duration-500"
     >
       <>
         <Zoom in={showModal} {...(showModal ? { timeout: 1000 } : {})}>
@@ -30,14 +30,13 @@ function Modal() {
               Choose your destination
             </h2>
             <div className="flex space-x-4 justify-center w-full font-extralight">
-              <CardContainer image={Moon} name={"The Moon"} />
+              
               <CardContainer image={Mars} name={"Mars"} />
-              <CardContainer image={Europa} name={"Europa"} />
-              <CardContainer image={Titan} name={"Titan"} />
+              
             </div>
             <Link href="/destinations" className="block max-w-sm m-auto">
               <button className="btn">
-                See destinations!
+                See more destinations!
               </button>
             </Link>
           </div>

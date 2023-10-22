@@ -5,17 +5,27 @@ import { sendForm } from "@/lib/api";
 import backgroundImage from "@/public/destination/background-destination-desktop.jpg";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { ImSpinner9 } from "react-icons/im";
+import { AiOutlineCheck } from "react-icons/ai";
 
 function ticket() {
-  const [submitted, useSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = async(data) => {
-    await sendForm(data)
-    useSubmitted(true);
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      await sendForm(data);
+    } catch (error) {
+      setLoading(false);
+      error = errors;
+    }
+    setLoading(false);
+    setSubmitted(true);
   };
 
   return (
@@ -31,10 +41,12 @@ function ticket() {
           <h2 className="text-center text-xs opacity-60">
             shshh! you made it to the secret ticket page..
           </h2>
+
           {submitted ? (
             <>
-            <p className="text-4xl tracking-widest text-center">START PACKING RIGHT NOW!</p>
-            <h4 className="text-center opacity-70 text-md">Yes..it's that fast!!</h4>
+              <button type="submit" className="btnSub">
+                <AiOutlineCheck />
+              </button>
             </>
           ) : (
             <form
@@ -75,9 +87,18 @@ function ticket() {
                   Please enter a travel date
                 </p>
               )}
-              <button type="submit" className="btn">
-                Book a ticket
-              </button>
+              {loading ? (
+                <button
+                  disabled
+                  className="disBtn flex justify-center items-center"
+                >
+                  <ImSpinner9 className="animate-spin text-lg" />
+                </button>
+              ) : (
+                <button type="submit" className="btn">
+                  Book a ticket
+                </button>
+              )}
               <h6 className="text-xs opacity-50">
                 You will be notified in the email provided shortly after
               </h6>

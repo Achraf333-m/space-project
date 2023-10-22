@@ -15,37 +15,37 @@ function Crew() {
     <>
       <Tab name={"Crew"} />
       <Background background={backgroundImage} />
-      <div className="pageFormat !overflow-y-visible">
+      <div className="pageFormat !overflow-y-visible !space-y-20">
         <Nav />
         <CrewCard
           background={anoush}
-          style={"flex-row"}
+          style={"md:flex-row"}
           name={crew[3].name}
           bio={crew[3].bio}
           role={crew[3].role}
         />
         <CrewCard
           background={douglas}
-          style={"flex-row-reverse"}
+          style={"md:flex-row-reverse"}
           name={crew[0].name}
           bio={crew[0].bio}
           role={crew[0].role}
         />
         <CrewCard
           background={mark}
-          style={"flex-row"}
+          style={"md:flex-row"}
           name={crew[1].name}
           bio={crew[1].bio}
           role={crew[1].role}
         />
         <CrewCard
           background={victor}
-          style={"flex-row-reverse"}
+          style={"md:flex-row-reverse"}
           name={crew[2].name}
           bio={crew[2].bio}
           role={crew[2].role}
         />
-        <Link href={'/technologies'} className="flex justify-center items-center p-24">
+        <Link href={'/technologies'} className="flex justify-center items-center p-8 md:p-24">
           <button className="btn max-w-xl">See what we're working with!</button>
         </Link>
       </div>

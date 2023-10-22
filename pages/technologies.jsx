@@ -14,7 +14,7 @@ function technologies() {
     <>
       <Tab name={"Technologies"} />
       <Background background={backgroundImage} />
-      <div className="pageFormat !overflow-y-visible">
+      <div className="pageFormat !overflow-y-visible !space-y-20">
         <Nav />
         <Technology
           image={launch}
@@ -36,7 +36,7 @@ function technologies() {
         />
         <Link
           href={"/ticket"}
-          className="flex justify-center items-center p-24"
+          className="flex justify-center items-center p-4 md:p-24"
         >
           <button className="btn max-w-xl">Ready to book your ticket?</button>
         </Link>

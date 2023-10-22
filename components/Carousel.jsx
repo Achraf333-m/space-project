@@ -22,7 +22,7 @@ export default class Carousel extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="p-20 px-40 m-auto">
+      <div className="p-5 md:p-20 md:px-40 m-auto">
         <Slider {...settings}>
           <Planet
             name={destinations[1].name}
@@ -53,7 +53,7 @@ export default class Carousel extends Component {
             travel={destinations[3].travel}
           />
           <div className="flex justify-center items-center h-96 w-full space-x-4">
-            <div className="flex justify-center p-20 items-center">
+            <div className="flex justify-center p-8 md:p-20 items-center">
               <Link href="/crew">
                 <button className="px-16 py-4 bg-[#12052273] active:border-[1px] active:border-yellow-700 hover:bg-black  rounded-md">
                   Meet your crew

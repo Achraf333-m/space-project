@@ -2,12 +2,13 @@ import Image from "next/image";
 import logo from "@/public/shared/logo.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Dropdown from "./ui/Dropdown";
 
 function Nav() {
   const router = useRouter();
   const path = router.pathname;
   return (
-    <nav className=" m-auto max-w-6xl h-40 flex items-center justify-between">
+    <nav className="m-auto max-w-6xl h-40 flex items-center justify-between">
       <Link href="/">
         <Image
           src={logo}
@@ -16,7 +17,7 @@ function Nav() {
         />
       </Link>
 
-      <ul className="flex space-x-4 text-xl font-extralight">
+      <ul className="hidden sm:flex space-x-4 text-xl font-extralight">
         <li className="listStyle">
           {path === "/" || (
             <Link href="/"> Home</Link>
@@ -36,6 +37,7 @@ function Nav() {
           )}
         </li>
       </ul>
+      <Dropdown />
     </nav>
   );
 }

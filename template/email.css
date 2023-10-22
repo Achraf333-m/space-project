@@ -1,0 +1,20 @@
+.row {
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+    padding: 24px;
+    font-size: 32px;
+    color: blueviolet;
+}
+.container {
+    padding: 24px;
+}
+.large {
+    font-size: 32px;
+    color: blueviolet;
+}
+.info {
+    font-size: 14px;
+    color: aqua;
+    max-width: 200px;
+}
