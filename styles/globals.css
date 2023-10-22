@@ -44,3 +44,14 @@ body {
   }
 }
 
+@layer base {
+  input {
+    @apply bg-[#00000052] text-white outline-none py-2 px-4
+  }
+  input::-webkit-calendar-picker-indicator {
+    @apply bg-white cursor-pointer rounded-full
+  }
+  select {
+    @apply bg-black py-2 px-4 outline-none cursor-pointer
+  }
+}
