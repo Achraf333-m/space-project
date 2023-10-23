@@ -21,11 +21,11 @@ function Modal() {
     <MuiModal
       open={showModal}
       onClose={handleModal}
-      className="max-w-5xl !p-10 m-auto !top-40 !flex !flex-col !items-center transition-all !duration-500"
+      className="max-w-5xl py-4 px-10 md:!p-10 m-auto !top-40 !flex !flex-col !items-center transition-all !duration-500"
     >
       <>
         <Zoom in={showModal} {...(showModal ? { timeout: 1000 } : {})}>
-          <div className="space-y-16 text-center w-full">
+          <div className="space-y-2 md:space-y-16 text-center w-full">
             <h2 className="text-4xl tracking-wider font-extralight">
               Choose your destination
             </h2>
